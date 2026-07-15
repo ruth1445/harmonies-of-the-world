@@ -1,0 +1,17 @@
+{
+  "name": "harmonies-of-the-world",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "An interactive 3D cosmic instrument inspired by Kepler’s Harmonices Mundi",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "three": "^0.178.0"
+  },
+  "devDependencies": {
+    "vite": "^7.0.4"
+  }
+}

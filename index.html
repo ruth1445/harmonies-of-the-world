@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#030304" />
+    <title>Harmonies of the World</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <canvas id="universe"></canvas>
+
+    <div id="intro" class="screen active">
+      <div class="intro-copy">
+        <p class="eyebrow">An instrument for listening to form</p>
+        <h1>Harmonies<br><span>of the World</span></h1>
+        <p class="intro-line">The universe does not sing. Yet its motions are full of intervals.</p>
+        <button id="enterButton" class="primary-button">Explore the universe <span>↗</span></button>
+      </div>
+      <p class="sound-note">Sound begins when you enter</p>
+    </div>
+
+    <header id="topbar" class="hidden">
+      <button id="homeButton" class="wordmark">HARMONIES OF THE WORLD</button>
+      <div id="breadcrumb" class="breadcrumb"></div>
+      <button id="soundButton" class="icon-button" aria-label="Toggle sound">Sound on</button>
+    </header>
+
+    <aside id="storyPanel" class="panel hidden">
+      <p id="chapter" class="chapter"></p>
+      <h2 id="sceneTitle"></h2>
+      <p id="sceneBody" class="scene-body"></p>
+      <div id="sceneMetric" class="metric"></div>
+      <div id="sceneActions" class="actions"></div>
+    </aside>
+
+    <div id="hint" class="hint hidden">Drag to orbit · Scroll to move through scale</div>
+
+    <section id="datePanel" class="date-panel hidden">
+      <div>
+        <p class="label">A chord called now</p>
+        <div id="dateReadout" class="date-readout">July 18, 2026</div>
+      </div>
+      <input id="dateSlider" type="range" min="-500" max="500" value="0" step="1" aria-label="Move through years" />
+      <div class="date-buttons">
+        <button data-date="today">Today</button>
+        <button data-date="event">July 18, 2026</button>
+        <button data-date="kepler">1619</button>
+        <button data-date="birthday">My birthday</button>
+      </div>
+      <div id="birthdayEntry" class="birthday-entry hidden">
+        <input id="birthdayInput" type="date" />
+        <button id="birthdayGo">Hear it</button>
+      </div>
+    </section>
+
+    <nav id="scaleNav" class="scale-nav hidden" aria-label="Scale navigation"></nav>
+
+    <div id="loading" class="loading">Awakening the orrery…</div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
